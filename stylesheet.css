@@ -1,0 +1,12 @@
+.cal {
+    display: grid;
+    grid-template-rows: 50px 50px 50px 50px;
+    grid-template-columns: 50px 50px 50px 50px;
+    padding: 20% 40%;
+    
+    
+}
+
+.but {
+    width: 150px;
+}
