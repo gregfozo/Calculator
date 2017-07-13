@@ -1,9 +1,9 @@
 .cal {
     display: grid;
     height: 420px;
-    width: 320px;
+    width: 290px;
     margin: 10% auto;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 25% 25% 25% 25%;
     border-style: ridge;
     border-color: gray;
     border-width: 10px;
