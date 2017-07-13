@@ -17,6 +17,8 @@ body {
     grid-template-columns: 25% 25% 25% 25%;
 }
 
+
+
 input[type=number] {
     font-family: 'AvenirLTStd-Light';
     border: solid;
@@ -39,9 +41,9 @@ input[type=button] {
 	font-variant: normal;
 	font-weight: 320;
 	line-height: 26.4px;
-    background-color: #E6E6FA;
+    background-color: rgb(224,224,224);
 	border: solid;
-	border-color: #C0C0C0;
+	border-color: rgb(166,166,166);
 	border-width: 1px;
 }
 
@@ -49,12 +51,21 @@ input[type=button]:active {
     background-color: #C0C0C0;
 }
 
-.but {
+#but {
     grid-column: 2 / 5;
 }
 
-.input {
+#input {
     display: grid;
     grid-column: 1 / 5;
+}
+
+input[type=button].symbols {
+    color: #fff;
+    background-color: rgb(245,146,61);
+}
+
+input[type=button].symbols:active {
+    background-color: rgb(252,116,0);
 }
 
