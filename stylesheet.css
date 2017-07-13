@@ -1,43 +1,52 @@
+@font-face {
+    font-family: 'AvenirLTStd-Light';
+    src: url('avenirltstd-light.otf');
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
 .cal {
     display: grid;
-    height: 420px;
+    height: 320px;
     width: 290px;
     margin: 10% auto;
     grid-template-columns: 25% 25% 25% 25%;
-    border-style: ridge;
-    border-color: bisque;
-    border-width: 10px;
-    padding: 15px;
-    border-radius: 15px;
-    background-color: blanchedalmond;
 }
 
 input[type=number] {
-    border-radius: 15px;
-    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'AvenirLTStd-Light';
+    border: solid;
+	border-width: 1px;
+	border-color: grey;
     font-size: 24px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 320;
 	line-height: 26.4px;
+    background: rgba(192,192,192,0.75);
+    //* filter: blur(5px); blur  https://jordanhollinger.com/2014/01/29/css-gaussian-blur-behind-a-translucent-box/ *//
        
 }
 
 input[type=button] {
-    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'AvenirLTStd-Light';
     font-size: 24px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 320;
 	line-height: 26.4px;
-    background-color: #fff;
-    border-radius: 15px;
-    text-shadow: 1px 1px 35px black;
-        
+    background-color: #E6E6FA;
+	border: solid;
+	border-color: #C0C0C0;
+	border-width: 1px;
 }
 
-input[type=button]:hover {
-    background-color: blanchedalmond;
+input[type=button]:active {
+    background-color: #C0C0C0;
 }
 
 .but {
@@ -49,8 +58,3 @@ input[type=button]:hover {
     grid-column: 1 / 5;
 }
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
