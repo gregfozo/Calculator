@@ -5,10 +5,11 @@
     margin: 10% auto;
     grid-template-columns: 25% 25% 25% 25%;
     border-style: ridge;
-    border-color: gray;
+    border-color: bisque;
     border-width: 10px;
     padding: 15px;
     border-radius: 15px;
+    background-color: blanchedalmond;
 }
 
 input[type=number] {
@@ -36,7 +37,7 @@ input[type=button] {
 }
 
 input[type=button]:hover {
-    background-color: lightgrey;
+    background-color: blanchedalmond;
 }
 
 .but {
@@ -46,4 +47,10 @@ input[type=button]:hover {
 .input {
     display: grid;
     grid-column: 1 / 5;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
