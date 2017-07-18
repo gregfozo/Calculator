@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'AvenirLTStd-Light';
-    src: url('avenirltstd-light.otf');
+    src: url('../assets/avenirltstd-light.otf');
 }
 
 body {
