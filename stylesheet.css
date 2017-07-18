@@ -28,11 +28,13 @@ input[type=number] {
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 320;
+    color: white;
 	line-height: 26.4px;
-    background: rgba(192,192,192,0.75);
-    //* filter: blur(5px); blur  https://jordanhollinger.com/2014/01/29/css-gaussian-blur-behind-a-translucent-box/ *//
+    background: rgba(110,110,110,0.75);
+    border-radius: 10px 10px 0 0;
        
 }
+
 
 input[type=button] {
     font-family: 'AvenirLTStd-Light';
@@ -44,8 +46,9 @@ input[type=button] {
     background-color: rgb(224,224,224);
 	border: solid;
 	border-color: rgb(166,166,166);
-	border-width: 1px;
-}
+	border-width: 1px 1px 0 0;
+    z-index: 100;
+    }
 
 input[type=button]:active {
     background-color: #C0C0C0;
@@ -57,7 +60,9 @@ input[type=button]:active {
 
 #input {
     display: grid;
-    grid-column: 1 / 5;
+    grid-column: 1 / 5;  
+    position: relative;
+    z-index: 100;
 }
 
 input[type=button].symbols {
@@ -69,3 +74,13 @@ input[type=button].symbols:active {
     background-color: rgb(252,116,0);
 }
 
+#blur {
+    background: black;
+    filter: blur(7px);
+    position: absolute;
+    margin: auto;
+    z-index: 99;
+    height: 64px;
+    width: 290px;
+    
+}
