@@ -3,9 +3,7 @@ function $(attr) {
 }
 
 function numberButton(number) {
-    var inputField = $("input");
-    var inputValue = inputField.value;
-    var prefix = "";
+    var inputField = $("input"), inputValue = inputField.value, prefix = "";
     if (inputValue !== "0") {
         prefix = inputValue;
     }
@@ -20,7 +18,12 @@ function plus() {
 }
 
 function equal() {
-    $("input").value = Number(currentValue) + Number($("input").value);
+    if (plus == 'true') {
+        $("input").value = Number(currentValue) + Number($("input").value);
+    }
+    else {
+        $("input").value = Number(currentValue) - Number($("input").value); 
+    }
 }
 
 function minus() {
