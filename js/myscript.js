@@ -11,22 +11,25 @@ function numberButton(number) {
 }
 
 var currentValue = 0;
+var called = 0;
 
 function plus() {
+    called = 1;
+    currentValue = $("input").value;
+    $("input").value = 0;
+}
+
+function minus() {
+    called = 2;
     currentValue = $("input").value;
     $("input").value = 0;
 }
 
 function equal() {
-    if (plus == 'true') {
+    if (called == 1) {
         $("input").value = Number(currentValue) + Number($("input").value);
     }
-    else {
+    else if (called == 2) {
         $("input").value = Number(currentValue) - Number($("input").value); 
     }
-}
-
-function minus() {
-    currentValue = $("input").value;
-    $("input").value = 0;
 }
