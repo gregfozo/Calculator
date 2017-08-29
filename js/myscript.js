@@ -4,32 +4,39 @@ function $(attr) {
 
 function numberButton(number) {
     var inputField = $("input"), inputValue = inputField.value, prefix = "";
-    if (inputValue !== "0") {
+        if (inputValue !== "0" && !shouldReset) {
         prefix = inputValue;
-    }
+        }
     inputField.value = prefix + number;
+    shouldReset = false;
 }
 
-var currentValue = 0;
-var called = 0;
-
-function plus() {
-    called = 1;
-    currentValue = $("input").value;
-    $("input").value = 0;
-}
-
-function minus() {
-    called = 2;
-    currentValue = $("input").value;
-    $("input").value = 0;
-}
+var shouldReset = false;
+var oldValue = 0;
+var nextOperand;
 
 function equal() {
-    if (called == 1) {
-        $("input").value = Number(currentValue) + Number($("input").value);
+    var result;
+    var newValue = $("input").value;
+    switch(nextOperand) {
+        case "minus":
+            result = Number(oldValue) - Number(newValue);
+            console.log(result);
+            break;
+        case 'plus':
+            result = Number(oldValue) + Number(newValue);
+            break;
+            
+        default:
+            console.log("kurva anyad");
     }
-    else if (called == 2) {
-        $("input").value = Number(currentValue) - Number($("input").value); 
-    }
+    console.log(result);
+    $("input").value = result;
+    shouldReset = true;
+}
+
+function operand(operand) {
+    nextOperand = operand;
+    oldValue = $("input").value;
+    $("input").value = 0;
 }
